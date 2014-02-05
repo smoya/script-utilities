@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ $1 ]
+then
+    redis-cli KEYS "$1:*" | xargs redis-cli DEL
+fi
